@@ -49,7 +49,7 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    git config user.email "a.mauriciomercado@outlook.com"
+                    git config user.email "a.msds@gmail.com"
                     git config user.name "devops-cloud-mm"
                     sed -i "s/tag: .*/tag: \"${build_version}\"/" helm/app/values.yaml
                     git add helm/app/values.yaml
